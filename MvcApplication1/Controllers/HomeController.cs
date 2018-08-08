@@ -18,6 +18,10 @@ namespace MvcApplication1.Controllers
             return View();
         }
 
+        public ActionResult ShowGoogle()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";

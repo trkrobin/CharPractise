@@ -286,6 +286,7 @@
     <Content Include="Views\Home\ShowChart.cshtml" />
     <Content Include="Views\Home\ShowLine.cshtml" />
     <Content Include="Views\Home\ShowPie.cshtml" />
+    <Content Include="Views\Home\ShowGoogle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
