@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "ShowLine";
+}
+
+<h2 class="text-center">Line Chart</h2>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Product Trends By Month"
+	},
+	axisY: {
+		includeZero: false
+	},
+	toolTip: {
+		shared: true
+	},
+	data: [{
+		type: "line",
+		name: "Desktops",
+		showInLegend: true,
+		dataPoints: @Html.Raw(ViewBag.DataPoints1)
+	}, {
+		type: "line",
+		name: "Laptops",
+		showInLegend: true,
+		dataPoints: @Html.Raw(ViewBag.DataPoints2)
+	}, {
+		type: "line",
+		name: "Mobiles",
+		showInLegend: true,
+		dataPoints: @Html.Raw(ViewBag.DataPoints3)
+	}]
+});
+chart.render();
+ 
+}
+</script>
